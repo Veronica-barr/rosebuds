@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Profesores - EduSolve</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
+    <link rel="icon" href="../../../assets/images/escudo.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu">
+                <div class="logo-container">
+                    <img src="../../../assets/images/escudo.png" alt="Escudo de la escuela" class="header-logo">
+                    <a href="../../../index.html" class="logo">EduSolve<span class="school-name">Asignar Profesores</span></a>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../dashboard.html" class="nav-link">Inicio</a></li>
+                        <li><a href="../estudiantes/listado.html" class="nav-link">Estudiantes</a></li>
+                        <li><a href="listado.html" class="nav-link">Materias</a></li>
+                        <li><button id="logoutBtn" class="nav-link nav-button">Cerrar Sesión</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-panel">
+        <div class="container">
+            <div class="admin-header">
+                <h1 class="admin-title">Asignación de Profesores</h1>
+                <a href="listado.html" class="button button-secondary">← Volver</a>
+            </div>
+            
+            <form class="admin-form">
+                <div class="form-group">
+                    <label for="subject" class="form-label">Materia</label>
+                    <select id="subject" class="form-control" required>
+                        <option value="">Seleccionar materia</option>
+                        <option value="math">Matemáticas</option>
+                        <option value="language">Lengua y Literatura</option>
+                        <option value="physics">Física</option>
+                        <option value="chemistry">Química</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="grade" class="form-label">Curso</label>
+                    <select id="grade" class="form-control" required>
+                        <option value="">Seleccionar curso</option>
+                        <option value="1A">1° A</option>
+                        <option value="1B">1° B</option>
+                        <option value="2A">2° A</option>
+                        <option value="2B">2° B</option>
+                        <option value="3A">3° A</option>
+                        <option value="3B">3° B</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacher" class="form-label">Profesor</label>
+                    <select id="teacher" class="form-control" required>
+                        <option value="">Seleccionar profesor</option>
+                        <option value="1">Prof. García</option>
+                        <option value="2">Prof. Martínez</option>
+                        <option value="3">Prof. López</option>
+                        <option value="4">Prof. Rodríguez</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="schedule" class="form-label">Horario</label>
+                    <input type="text" id="schedule" class="form-control" placeholder="Ej: Lunes y Miércoles 8:00-10:00" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="button button-secondary">Cancelar</button>
+                    <button type="submit" class="button button-primary">Asignar Profesor</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../../../assets/js/directivo.js"></script>
+</body>
+</html>

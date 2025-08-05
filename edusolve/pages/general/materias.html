@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materias - EduSolve</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/materias.css">
+    <link rel="icon" href="../../assets/images/escudo.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu">
+                <div class="logo-container">
+                    <img src="../../assets/images/escudo.png" alt="Escudo de la escuela" class="header-logo">
+                    <a href="../../index.html" class="logo">EduSolve<span class="school-name">E.E.S.T.N°3</span></a>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../../index.html" class="nav-link">Inicio</a></li>
+                        <li><a href="materias.html" class="nav-link active">Materias</a></li>
+                        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                        <li><a href="../auth/login.html" class="nav-link nav-button">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="materias-header">
+                <h1 class="materias-title">Nuestras Materias</h1>
+                <p class="materias-subtitle">Conoce el plan de estudios de nuestra institución</p>
+            </section>
+            
+            <div class="materias-filters">
+                <button class="filter-button active" data-filter="all">Todas</button>
+                <button class="filter-button" data-filter="1">1° Año</button>
+                <button class="filter-button" data-filter="2">2° Año</button>
+                <button class="filter-button" data-filter="3">3° Año</button>
+                <button class="filter-button" data-filter="4">4° Año</button>
+                <button class="filter-button" data-filter="5">5° Año</button>
+                <button class="filter-button" data-filter="6">6° Año</button>
+                <button class="filter-button" data-filter="7">7° Año</button>
+            </div>
+            
+            <div class="materias-grid">
+                <article class="materia-card" data-year="1">
+                    <div class="materia-image" style="background-color: #3498db;">
+                        <span>M</span>
+                    </div>
+                    <div class="materia-content">
+                        <h3 class="materia-name">Matemáticas</h3>
+                        <p class="materia-teacher">Prof. García</p>
+                        <p class="materia-description">Álgebra, geometría y conceptos matemáticos fundamentales.</p>
+                        <div class="materia-stats">
+                            <span>1° Año</span>
+                            <span>4 horas semanales</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="materia-card" data-year="1">
+                    <div class="materia-image" style="background-color: #e74c3c;">
+                        <span>L</span>
+                    </div>
+                    <div class="materia-content">
+                        <h3 class="materia-name">Lengua y Literatura</h3>
+                        <p class="materia-teacher">Prof. Martínez</p>
+                        <p class="materia-description">Análisis de textos, gramática y producción escrita.</p>
+                        <div class="materia-stats">
+                            <span>1° Año</span>
+                            <span>3 horas semanales</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="materia-card" data-year="2">
+                    <div class="materia-image" style="background-color: #2ecc71;">
+                        <span>F</span>
+                    </div>
+                    <div class="materia-content">
+                        <h3 class="materia-name">Física</h3>
+                        <p class="materia-teacher">Prof. López</p>
+                        <p class="materia-description">Principios fundamentales de mecánica y energía.</p>
+                        <div class="materia-stats">
+                            <span>2° Año</span>
+                            <span>3 horas semanales</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="materia-card" data-year="3">
+                    <div class="materia-image" style="background-color: #f39c12;">
+                        <span>P</span>
+                    </div>
+                    <div class="materia-content">
+                        <h3 class="materia-name">Programación</h3>
+                        <p class="materia-teacher">Prof. Rodríguez</p>
+                        <p class="materia-description">Fundamentos de programación y desarrollo de software.</p>
+                        <div class="materia-stats">
+                            <span>3° Año</span>
+                            <span>5 horas semanales</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 EduSolve - E.E.S.T.N°3. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Filtrado de materias por año
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Actualizar botones activos
+                document.querySelectorAll('.filter-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Filtrar materias
+                document.querySelectorAll('.materia-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-year') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Materias - EduSolve</title>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="icon" href="../../../../assets/images/escudo.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu">
+                <div class="logo-container">
+                    <img src="../../../assets/images/escudo.png" alt="Escudo de la escuela" class="header-logo">
+                    <a href="../../student/dashboard.html" class="logo">EduSolve<span class="school-name">Mis Materias</span></a>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../../student/dashboard.html" class="nav-link">Inicio</a></li>
+                        <li><a href="listado.html" class="nav-link active">Mis Materias</a></li>
+                        <li><button id="logoutBtn" class="nav-link nav-button">Cerrar Sesión</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="student-container">
+        <div class="container">
+            <h1 class="admin-title">Mis Materias</h1>
+            
+            <table class="admin-table" id="coursesTable">
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>Profesor</th>
+                        <th>Calificación</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos cargados dinámicamente -->
+                </tbody>
+            </table>
+            
+            <div class="materials-section">
+                <h2>Material de Estudio</h2>
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <h3>Matemáticas</h3>
+                        <ul class="material-list">
+                            <li><a href="#">Guía de ejercicios 1</a></li>
+                            <li><a href="#">Presentación - Clase 3</a></li>
+                            <li><a href="#">Examen parcial resuelto</a></li>
+                        </ul>
+                    </div>
+                    <div class="material-card">
+                        <h3>Lengua</h3>
+                        <ul class="material-list">
+                            <li><a href="#">Libro de lectura</a></li>
+                            <li><a href="#">Guía de análisis</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../../../assets/js/estudiante.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones - EduSolve</title>
+     <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="icon" href="../../assets/images/escudo.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu">
+                <div class="logo-container">
+                    <img src="../../../assets/images/escudo.png" alt="Escudo de la escuela" class="header-logo">
+                    <a href="../../../index.html" class="logo">EduSolve<span class="school-name">Calificaciones</span></a>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../../dashboard.html" class="nav-link">Inicio</a></li>
+                        <li><a href="listado.html" class="nav-link active">Calificaciones</a></li>
+                        <li><button id="logoutBtn" class="nav-link nav-button">Cerrar Sesión</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="teacher-container">
+        <div class="container">
+            <div class="admin-header">
+                <h1 class="admin-title">Gestión de Calificaciones</h1>
+                <div class="course-selector">
+                    <label for="courseSelect">Curso:</label>
+                    <select id="courseSelect" class="form-control">
+                        <option value="math3A">Matemáticas 3°A</option>
+                        <option value="physics4B">Física 4°B</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grades-actions">
+                <button class="button button-primary" id="saveGrades">Guardar Cambios</button>
+                <button class="button button-secondary" id="exportGrades">Exportar</button>
+                <form id="uploadGradesForm" style="display: inline-block;">
+                    <input type="file" id="gradesFile" accept=".csv,.xlsx" style="display: none;">
+                    <button type="button" class="button button-secondary" onclick="document.getElementById('gradesFile').click()">Importar</button>
+                </form>
+            </div>
+            
+            <table class="admin-table" id="studentsGradesTable">
+                <thead>
+                    <tr>
+                        <th>Estudiante</th>
+                        <th>Calificación</th>
+                        <th>Último Examen</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Datos cargados dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../../../assets/js/profesor.js"></script>
+
+
+</body>
+</html>

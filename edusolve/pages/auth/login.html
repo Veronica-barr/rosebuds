@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - EduSolve</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="icon" href="../../assets/images/escudo.png" type="image/png">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo-container" style="justify-content: center; margin-bottom: 1.5rem;">
+                <img src="../../assets/images/escudo.png" alt="Escudo de la escuela" width="50">
+                <h1 class="logo" style="font-size: 1.8rem;">EduSolve</h1>
+            </div>
+            
+            <h2 class="login-title">Iniciar Sesión</h2>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">Usuario</label>
+                    <input type="text" id="username" class="form-control" required placeholder="Ingrese su usuario">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" id="password" class="form-control" required placeholder="Ingrese su contraseña">
+                </div>
+                
+                <button type="submit" class="login-button">Ingresar</button>
+                
+                <div id="loginError" class="login-error" style="display: none;">
+                    Usuario o contraseña incorrectos
+                </div>
+            </form>
+            
+            <div class="login-links">
+                <a href="register.html">¿No tienes cuenta? Regístrate</a><br>
+                <a href="../general/contacto.html">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/js/login.js"></script>
+</body>
+</html>

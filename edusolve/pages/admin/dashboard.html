@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Directivo - EduSolve</title>
+   <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="icon" href="../../assets/images/escudo.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu">
+                <div class="logo-container">
+                    <img src="../../assets/images/escudo.png" alt="Escudo de la escuela" class="header-logo">
+                    <a href="../admin/dashboard.html" class="logo">EduSolve<span class="school-name">Panel Directivo</span></a>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="dashboard.html" class="nav-link active">Inicio</a></li>
+                        <li><a href="estudiantes/listado.html" class="nav-link">Estudiantes</a></li>
+                        <li><a href="materias/listado.html" class="nav-link">Materias</a></li>
+                        <li><button id="logoutBtn" class="nav-link nav-button">Cerrar Sesión</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-panel">
+        <div class="container">
+            <h1 class="admin-title">Panel de Administración</h1>
+            <p class="welcome-message">Bienvenido, <span class="current-user"></span></p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Estudiantes</h3>
+                    <p class="stat-number" id="totalStudents">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Aprobados</h3>
+                    <p class="stat-number" id="approvedPercentage">0%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Promedio General</h3>
+                    <p class="stat-number" id="averageGrade">0.0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Destacados</h3>
+                    <p class="stat-number" id="outstandingStudents">0</p>
+                </div>
+            </div>
+            
+            <section class="quick-actions">
+                <h2>Acciones Rápidas</h2>
+                <div class="actions-grid">
+                    <a href="estudiantes/listado.html" class="action-card">
+                        <span class="action-icon">👨‍🎓</span>
+                        <h3>Gestión de Estudiantes</h3>
+                    </a>
+                    <a href="materias/listado.html" class="action-card">
+                        <span class="action-icon">📚</span>
+                        <h3>Gestión de Materias</h3>
+                    </a>
+                    <a href="materias/asignar.html" class="action-card">
+                        <span class="action-icon">👨‍🏫</span>
+                        <h3>Asignar Profesores</h3>
+                    </a>
+                    <a href="#" class="action-card">
+                        <span class="action-icon">📊</span>
+                        <h3>Reportes</h3>
+                    </a>
+                </div>
+            </section>
+            
+            <section class="recent-activity">
+                <h2>Actividad Reciente</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Acción</th>
+                            <th>Usuario</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>05/06/2023</td>
+                            <td>Actualización de calificaciones</td>
+                            <td>Prof. García</td>
+                            <td>Matemáticas 3°A</td>
+                        </tr>
+                        <tr>
+                            <td>04/06/2023</td>
+                            <td>Nuevo estudiante</td>
+                            <td>Estudiante</td>
+                            <td>Juan Pérez</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <script src="../../assets/js/directivo.js"></script>
+</body>
+</html>
